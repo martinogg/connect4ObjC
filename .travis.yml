@@ -1,0 +1,4 @@
+language: objective-c
+script: ./build.sh
+osx_image: xcode9.1
+xcode_sdk: iphonesimulator11.0
