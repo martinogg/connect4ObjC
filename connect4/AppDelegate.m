@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Router.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,16 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    UIStoryboard* mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    id view = [mainStoryBoard instantiateViewControllerWithIdentifier:@"ViewController"];
+    [Router attachToViewController:view];
+    
+    _window.rootViewController = view;
+    [_window makeKeyAndVisible];
+    
     return YES;
 }
 

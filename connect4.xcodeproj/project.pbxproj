@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE766790206D61AB00BF32B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EAE206D5AC4003A793A /* ViewController.m */; };
+		EE766792206D65CC00BF32B6 /* RouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE766791206D65CC00BF32B6 /* RouterTests.m */; };
 		EE813EAC206D5AC4003A793A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EAB206D5AC4003A793A /* AppDelegate.m */; };
 		EE813EAF206D5AC4003A793A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EAE206D5AC4003A793A /* ViewController.m */; };
 		EE813EB2206D5AC4003A793A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE813EB0206D5AC4003A793A /* Main.storyboard */; };
@@ -16,6 +18,10 @@
 		EE813EBD206D5AC4003A793A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EBC206D5AC4003A793A /* main.m */; };
 		EE813EC7206D5AC5003A793A /* connect4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EC6206D5AC5003A793A /* connect4Tests.m */; };
 		EE813ED2206D5AC5003A793A /* connect4UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813ED1206D5AC5003A793A /* connect4UITests.m */; };
+		EE813EE5206D5F1B003A793A /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EE4206D5F1B003A793A /* ViewModel.m */; };
+		EE813EE6206D5F1B003A793A /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EE4206D5F1B003A793A /* ViewModel.m */; };
+		EE813EEA206D5F8F003A793A /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EE9206D5F8F003A793A /* Router.m */; };
+		EE813EEB206D5F8F003A793A /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EE9206D5F8F003A793A /* Router.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE766791206D65CC00BF32B6 /* RouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterTests.m; sourceTree = "<group>"; };
 		EE813EA7206D5AC4003A793A /* connect4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connect4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE813EAA206D5AC4003A793A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE813EAB206D5AC4003A793A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +60,11 @@
 		EE813ECD206D5AC5003A793A /* connect4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = connect4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE813ED1206D5AC5003A793A /* connect4UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = connect4UITests.m; sourceTree = "<group>"; };
 		EE813ED3206D5AC5003A793A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE813EE3206D5F1A003A793A /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		EE813EE4206D5F1B003A793A /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
+		EE813EE7206D5F3A003A793A /* Protocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
+		EE813EE8206D5F8F003A793A /* Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
+		EE813EE9206D5F8F003A793A /* Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Router.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +115,12 @@
 		EE813EA9206D5AC4003A793A /* connect4 */ = {
 			isa = PBXGroup;
 			children = (
+				EE813EE2206D5EF3003A793A /* Protocols */,
+				EE813EE1206D5EC6003A793A /* Router */,
+				EE813EE0206D5EBF003A793A /* ViewModel */,
+				EE813EDF206D5EB4003A793A /* ViewController */,
 				EE813EAA206D5AC4003A793A /* AppDelegate.h */,
 				EE813EAB206D5AC4003A793A /* AppDelegate.m */,
-				EE813EAD206D5AC4003A793A /* ViewController.h */,
-				EE813EAE206D5AC4003A793A /* ViewController.m */,
 				EE813EB0206D5AC4003A793A /* Main.storyboard */,
 				EE813EB6206D5AC4003A793A /* Assets.xcassets */,
 				EE813EB8206D5AC4003A793A /* LaunchScreen.storyboard */,
@@ -122,6 +136,7 @@
 			children = (
 				EE813EC6206D5AC5003A793A /* connect4Tests.m */,
 				EE813EC8206D5AC5003A793A /* Info.plist */,
+				EE766791206D65CC00BF32B6 /* RouterTests.m */,
 			);
 			path = connect4Tests;
 			sourceTree = "<group>";
@@ -133,6 +148,41 @@
 				EE813ED3206D5AC5003A793A /* Info.plist */,
 			);
 			path = connect4UITests;
+			sourceTree = "<group>";
+		};
+		EE813EDF206D5EB4003A793A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE813EAD206D5AC4003A793A /* ViewController.h */,
+				EE813EAE206D5AC4003A793A /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EE813EE0206D5EBF003A793A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE813EE3206D5F1A003A793A /* ViewModel.h */,
+				EE813EE4206D5F1B003A793A /* ViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EE813EE1206D5EC6003A793A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EE813EE8206D5F8F003A793A /* Router.h */,
+				EE813EE9206D5F8F003A793A /* Router.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EE813EE2206D5EF3003A793A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EE813EE7206D5F3A003A793A /* Protocols.h */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +320,9 @@
 			files = (
 				EE813EB5206D5AC4003A793A /* connect4.xcdatamodeld in Sources */,
 				EE813EAF206D5AC4003A793A /* ViewController.m in Sources */,
+				EE813EE5206D5F1B003A793A /* ViewModel.m in Sources */,
 				EE813EBD206D5AC4003A793A /* main.m in Sources */,
+				EE813EEA206D5F8F003A793A /* Router.m in Sources */,
 				EE813EAC206D5AC4003A793A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +331,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE813EE6206D5F1B003A793A /* ViewModel.m in Sources */,
+				EE813EEB206D5F8F003A793A /* Router.m in Sources */,
+				EE766792206D65CC00BF32B6 /* RouterTests.m in Sources */,
+				EE766790206D61AB00BF32B6 /* ViewController.m in Sources */,
 				EE813EC7206D5AC5003A793A /* connect4Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
