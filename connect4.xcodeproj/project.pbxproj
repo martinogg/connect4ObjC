@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		EE766790206D61AB00BF32B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EAE206D5AC4003A793A /* ViewController.m */; };
 		EE766792206D65CC00BF32B6 /* RouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE766791206D65CC00BF32B6 /* RouterTests.m */; };
+		EE766798206D6A0300BF32B6 /* GameStatesBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EE766797206D6A0300BF32B6 /* GameStatesBase.m */; };
+		EE766799206D6A0300BF32B6 /* GameStatesBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EE766797206D6A0300BF32B6 /* GameStatesBase.m */; };
+		EE76679C206D8E6700BF32B6 /* NewGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76679B206D8E6700BF32B6 /* NewGameState.m */; };
+		EE76679D206D8E6700BF32B6 /* NewGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76679B206D8E6700BF32B6 /* NewGameState.m */; };
+		EE7667A0206D8EE800BF32B6 /* PlayGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76679F206D8EE800BF32B6 /* PlayGameState.m */; };
+		EE7667A1206D8EE800BF32B6 /* PlayGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76679F206D8EE800BF32B6 /* PlayGameState.m */; };
+		EE7667A4206E459B00BF32B6 /* EndGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7667A3206E459B00BF32B6 /* EndGameState.m */; };
+		EE7667A5206E459B00BF32B6 /* EndGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7667A3206E459B00BF32B6 /* EndGameState.m */; };
+		EE7667A8206E64DB00BF32B6 /* GameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7667A7206E64DB00BF32B6 /* GameBoard.m */; };
+		EE7667A9206E64DB00BF32B6 /* GameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7667A7206E64DB00BF32B6 /* GameBoard.m */; };
+		EE7667AC206E64F100BF32B6 /* TileStack.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7667AB206E64F100BF32B6 /* TileStack.m */; };
+		EE7667AD206E64F100BF32B6 /* TileStack.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7667AB206E64F100BF32B6 /* TileStack.m */; };
+		EE7667B1206EBDE300BF32B6 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7667B0206EBDE300BF32B6 /* Tile.m */; };
+		EE7667B2206EBDE300BF32B6 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7667B0206EBDE300BF32B6 /* Tile.m */; };
 		EE813EAC206D5AC4003A793A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EAB206D5AC4003A793A /* AppDelegate.m */; };
 		EE813EAF206D5AC4003A793A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EAE206D5AC4003A793A /* ViewController.m */; };
 		EE813EB2206D5AC4003A793A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE813EB0206D5AC4003A793A /* Main.storyboard */; };
@@ -43,6 +57,21 @@
 
 /* Begin PBXFileReference section */
 		EE766791206D65CC00BF32B6 /* RouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterTests.m; sourceTree = "<group>"; };
+		EE766795206D68CA00BF32B6 /* GameStateProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameStateProtocols.h; sourceTree = "<group>"; };
+		EE766796206D6A0300BF32B6 /* GameStatesBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameStatesBase.h; sourceTree = "<group>"; };
+		EE766797206D6A0300BF32B6 /* GameStatesBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameStatesBase.m; sourceTree = "<group>"; };
+		EE76679A206D8E6700BF32B6 /* NewGameState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewGameState.h; sourceTree = "<group>"; };
+		EE76679B206D8E6700BF32B6 /* NewGameState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewGameState.m; sourceTree = "<group>"; };
+		EE76679E206D8EE800BF32B6 /* PlayGameState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayGameState.h; sourceTree = "<group>"; };
+		EE76679F206D8EE800BF32B6 /* PlayGameState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayGameState.m; sourceTree = "<group>"; };
+		EE7667A2206E459B00BF32B6 /* EndGameState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndGameState.h; sourceTree = "<group>"; };
+		EE7667A3206E459B00BF32B6 /* EndGameState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EndGameState.m; sourceTree = "<group>"; };
+		EE7667A6206E64DB00BF32B6 /* GameBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameBoard.h; sourceTree = "<group>"; };
+		EE7667A7206E64DB00BF32B6 /* GameBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameBoard.m; sourceTree = "<group>"; };
+		EE7667AA206E64F100BF32B6 /* TileStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileStack.h; sourceTree = "<group>"; };
+		EE7667AB206E64F100BF32B6 /* TileStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileStack.m; sourceTree = "<group>"; };
+		EE7667AF206EBDE200BF32B6 /* Tile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		EE7667B0206EBDE300BF32B6 /* Tile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		EE813EA7206D5AC4003A793A /* connect4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connect4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE813EAA206D5AC4003A793A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE813EAB206D5AC4003A793A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,6 +121,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE766793206D685400BF32B6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EE7667A6206E64DB00BF32B6 /* GameBoard.h */,
+				EE7667A7206E64DB00BF32B6 /* GameBoard.m */,
+				EE7667AA206E64F100BF32B6 /* TileStack.h */,
+				EE7667AB206E64F100BF32B6 /* TileStack.m */,
+				EE7667AF206EBDE200BF32B6 /* Tile.h */,
+				EE7667B0206EBDE300BF32B6 /* Tile.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		EE766794206D685D00BF32B6 /* GameStates */ = {
+			isa = PBXGroup;
+			children = (
+				EE766796206D6A0300BF32B6 /* GameStatesBase.h */,
+				EE766797206D6A0300BF32B6 /* GameStatesBase.m */,
+				EE76679A206D8E6700BF32B6 /* NewGameState.h */,
+				EE76679B206D8E6700BF32B6 /* NewGameState.m */,
+				EE76679E206D8EE800BF32B6 /* PlayGameState.h */,
+				EE76679F206D8EE800BF32B6 /* PlayGameState.m */,
+				EE7667A2206E459B00BF32B6 /* EndGameState.h */,
+				EE7667A3206E459B00BF32B6 /* EndGameState.m */,
+			);
+			path = GameStates;
+			sourceTree = "<group>";
+		};
 		EE813E9E206D5AC4003A793A = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +172,8 @@
 		EE813EA9206D5AC4003A793A /* connect4 */ = {
 			isa = PBXGroup;
 			children = (
+				EE766794206D685D00BF32B6 /* GameStates */,
+				EE766793206D685400BF32B6 /* Entities */,
 				EE813EE2206D5EF3003A793A /* Protocols */,
 				EE813EE1206D5EC6003A793A /* Router */,
 				EE813EE0206D5EBF003A793A /* ViewModel */,
@@ -181,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				EE813EE7206D5F3A003A793A /* Protocols.h */,
+				EE766795206D68CA00BF32B6 /* GameStateProtocols.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -318,12 +378,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7667B1206EBDE300BF32B6 /* Tile.m in Sources */,
 				EE813EB5206D5AC4003A793A /* connect4.xcdatamodeld in Sources */,
 				EE813EAF206D5AC4003A793A /* ViewController.m in Sources */,
+				EE7667A0206D8EE800BF32B6 /* PlayGameState.m in Sources */,
+				EE7667A8206E64DB00BF32B6 /* GameBoard.m in Sources */,
+				EE7667A4206E459B00BF32B6 /* EndGameState.m in Sources */,
 				EE813EE5206D5F1B003A793A /* ViewModel.m in Sources */,
+				EE7667AC206E64F100BF32B6 /* TileStack.m in Sources */,
 				EE813EBD206D5AC4003A793A /* main.m in Sources */,
 				EE813EEA206D5F8F003A793A /* Router.m in Sources */,
 				EE813EAC206D5AC4003A793A /* AppDelegate.m in Sources */,
+				EE76679C206D8E6700BF32B6 /* NewGameState.m in Sources */,
+				EE766798206D6A0300BF32B6 /* GameStatesBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,8 +400,15 @@
 			files = (
 				EE813EE6206D5F1B003A793A /* ViewModel.m in Sources */,
 				EE813EEB206D5F8F003A793A /* Router.m in Sources */,
+				EE7667A9206E64DB00BF32B6 /* GameBoard.m in Sources */,
+				EE766799206D6A0300BF32B6 /* GameStatesBase.m in Sources */,
+				EE76679D206D8E6700BF32B6 /* NewGameState.m in Sources */,
+				EE7667A1206D8EE800BF32B6 /* PlayGameState.m in Sources */,
 				EE766792206D65CC00BF32B6 /* RouterTests.m in Sources */,
+				EE7667B2206EBDE300BF32B6 /* Tile.m in Sources */,
 				EE766790206D61AB00BF32B6 /* ViewController.m in Sources */,
+				EE7667A5206E459B00BF32B6 /* EndGameState.m in Sources */,
+				EE7667AD206E64F100BF32B6 /* TileStack.m in Sources */,
 				EE813EC7206D5AC5003A793A /* connect4Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

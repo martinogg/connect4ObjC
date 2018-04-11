@@ -8,11 +8,14 @@
 
 #import "Router.h"
 #import "ViewModel.h"
+#import "NewGameState.h"
+#import "PlayGameState.h"
+#import "EndGameState.h"
 
 @implementation Router
 
 +(void) attachToViewController:(id<ViewControllerProtocol>) viewController {
-    //TODO TEST
+    
     ViewModel* newViewModel = [[ViewModel alloc] init];
     Router* newRouter = [[Router alloc] init];
     
@@ -22,4 +25,12 @@
     viewController.viewModel = newViewModel;
 }
 
+-(NSArray<id<GameStateProtocol>> *) createGameStates {
+    // TODO TEST
+    NewGameState* newGameState = [[NewGameState alloc] init];
+    PlayGameState* playGameState = [[PlayGameState alloc] init];
+    EndGameState* endGameState = [[EndGameState alloc] init];
+    
+    return [NSArray<id<GameStateProtocol>> arrayWithObjects:newGameState, playGameState, endGameState, nil];
+}
 @end

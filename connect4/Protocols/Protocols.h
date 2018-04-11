@@ -10,11 +10,15 @@
 
 // Forward declarations
 @protocol ViewControllerProtocol;
+@protocol GameStateProtocol;
+@class Tile;
 
 // protocols
 
 @protocol RouterProtocol
-    
+
+-(NSArray<id<GameStateProtocol>> *) createGameStates;
+
 @end
 
 
@@ -32,5 +36,21 @@
 
 @end
 
+
+@protocol TileStackProtocol
+
+-(void) resetTiles;
+-(int) placeTileForPlayer:(Tile *)playerTile;
+
+@property (nonatomic, strong) NSArray<Tile *> *tiles;
+
+@end
+
+
+@protocol GameBoardProtocol
+
+@property (nonatomic, strong) NSArray<id<TileStackProtocol>> *tileStacks;
+
+@end
 
 

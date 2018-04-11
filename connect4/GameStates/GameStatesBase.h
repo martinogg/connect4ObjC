@@ -1,5 +1,5 @@
 //
-//  ViewModel.h
+//  GameStatesBase.h
 //  connect4
 //
 //  Created by martin ogg on 29/03/2018.
@@ -7,9 +7,8 @@
 //
 
 @import Foundation;
-#import "Protocols.h"
 #import "GameStateProtocols.h"
 
-@interface ViewModel : NSObject <ViewModelProtocol, GameStateToViewModelProtocol>
+@interface GameStatesBase : NSObject <GameStateProtocol>
 
 @end
