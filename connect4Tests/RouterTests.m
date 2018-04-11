@@ -11,6 +11,9 @@
 #import "Router.h"
 #import "ViewController.h"
 #import "ViewModel.h"
+#import "NewGameState.h"
+#import "PlayGameState.h"
+#import "EndGameState.h"
 
 @interface RouterTests : XCTestCase
 
@@ -37,6 +40,17 @@
     XCTAssert(viewControllerToReturn.viewModel != nil);
     XCTAssert(viewControllerToReturn.viewModel.router != nil);
     XCTAssert(viewControllerToReturn.viewModel.viewController != nil);
+    
+}
+
+-(void)testRouterCreateGameStates {
+    Router* routerToTest = [[Router alloc] init];
+  
+    NSArray<id<GameStateProtocol>> *returnedGameStates = [routerToTest createGameStates];
+    
+    XCTAssert([(NSObject *)[returnedGameStates objectAtIndex:0] isKindOfClass: [NewGameState class]]);
+    XCTAssert([(NSObject *)[returnedGameStates objectAtIndex:1] isKindOfClass: [PlayGameState class]]);
+    XCTAssert([(NSObject *)[returnedGameStates objectAtIndex:2] isKindOfClass: [EndGameState class]]);
     
 }
 

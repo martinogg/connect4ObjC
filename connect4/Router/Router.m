@@ -26,10 +26,11 @@
 }
 
 -(NSArray<id<GameStateProtocol>> *) createGameStates {
-    // TODO TEST
     NewGameState* newGameState = [[NewGameState alloc] init];
     PlayGameState* playGameState = [[PlayGameState alloc] init];
     EndGameState* endGameState = [[EndGameState alloc] init];
+    
+    //TODO set next game states for each and TEST
     
     return [NSArray<id<GameStateProtocol>> arrayWithObjects:newGameState, playGameState, endGameState, nil];
 }

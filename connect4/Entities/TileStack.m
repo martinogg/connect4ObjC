@@ -24,11 +24,11 @@
 }
 
 // return: (int) the position of the tile placed. Or -1 for fail
--(int) placeTileForPlayer:(Tile *)playerTile {
+-(int) placeTileForPlayer:(enum TileEnum)playerTile {
     // TODO TEST
     for (int i = 0; i < MAXSTACKHEIGHT; i++) {
         if ([tiles objectAtIndex:i].value == eTILE_EMPTY) {
-            [tiles objectAtIndex:i].value = playerTile.value;
+            [tiles objectAtIndex:i].value = playerTile;
             return i;
         }
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE3A6C5B207EB4CE00D5B385 /* TileStackFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3A6C5A207EB4CE00D5B385 /* TileStackFactory.m */; };
+		EE3A6C5C207EB4CE00D5B385 /* TileStackFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3A6C5A207EB4CE00D5B385 /* TileStackFactory.m */; };
 		EE766790206D61AB00BF32B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EAE206D5AC4003A793A /* ViewController.m */; };
 		EE766792206D65CC00BF32B6 /* RouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE766791206D65CC00BF32B6 /* RouterTests.m */; };
 		EE766798206D6A0300BF32B6 /* GameStatesBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EE766797206D6A0300BF32B6 /* GameStatesBase.m */; };
@@ -56,6 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE3A6C59207EB4CE00D5B385 /* TileStackFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileStackFactory.h; sourceTree = "<group>"; };
+		EE3A6C5A207EB4CE00D5B385 /* TileStackFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileStackFactory.m; sourceTree = "<group>"; };
+		EE3A6C5D207EB55300D5B385 /* FactoryProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryProtocols.h; sourceTree = "<group>"; };
 		EE766791206D65CC00BF32B6 /* RouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterTests.m; sourceTree = "<group>"; };
 		EE766795206D68CA00BF32B6 /* GameStateProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameStateProtocols.h; sourceTree = "<group>"; };
 		EE766796206D6A0300BF32B6 /* GameStatesBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameStatesBase.h; sourceTree = "<group>"; };
@@ -121,9 +126,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE3A6C58207EB4AB00D5B385 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				EE3A6C59207EB4CE00D5B385 /* TileStackFactory.h */,
+				EE3A6C5A207EB4CE00D5B385 /* TileStackFactory.m */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		EE766793206D685400BF32B6 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				EE3A6C58207EB4AB00D5B385 /* Factories */,
 				EE7667A6206E64DB00BF32B6 /* GameBoard.h */,
 				EE7667A7206E64DB00BF32B6 /* GameBoard.m */,
 				EE7667AA206E64F100BF32B6 /* TileStack.h */,
@@ -241,6 +256,7 @@
 			children = (
 				EE813EE7206D5F3A003A793A /* Protocols.h */,
 				EE766795206D68CA00BF32B6 /* GameStateProtocols.h */,
+				EE3A6C5D207EB55300D5B385 /* FactoryProtocols.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -389,6 +405,7 @@
 				EE813EBD206D5AC4003A793A /* main.m in Sources */,
 				EE813EEA206D5F8F003A793A /* Router.m in Sources */,
 				EE813EAC206D5AC4003A793A /* AppDelegate.m in Sources */,
+				EE3A6C5B207EB4CE00D5B385 /* TileStackFactory.m in Sources */,
 				EE76679C206D8E6700BF32B6 /* NewGameState.m in Sources */,
 				EE766798206D6A0300BF32B6 /* GameStatesBase.m in Sources */,
 			);
@@ -407,6 +424,7 @@
 				EE766792206D65CC00BF32B6 /* RouterTests.m in Sources */,
 				EE7667B2206EBDE300BF32B6 /* Tile.m in Sources */,
 				EE766790206D61AB00BF32B6 /* ViewController.m in Sources */,
+				EE3A6C5C207EB4CE00D5B385 /* TileStackFactory.m in Sources */,
 				EE7667A5206E459B00BF32B6 /* EndGameState.m in Sources */,
 				EE7667AD206E64F100BF32B6 /* TileStack.m in Sources */,
 				EE813EC7206D5AC5003A793A /* connect4Tests.m in Sources */,
