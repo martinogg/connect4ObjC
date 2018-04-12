@@ -8,6 +8,7 @@
 
 @import Foundation;
 #import "Tile.h"
+#import "GameStateProtocols.h"
 
 // Forward declarations
 @protocol ViewControllerProtocol;
@@ -28,6 +29,8 @@
 
 @property (nonatomic, weak) id<ViewControllerProtocol> viewController;
 @property (nonatomic, strong) id<RouterProtocol> router;
+@property (nonatomic, strong) NSArray<id<GameStateProtocol>> *gameStates;
+@property (nonatomic, weak) id<GameStateProtocol> currentGameState;
 
 @end
 
@@ -53,6 +56,8 @@
 
 -(instancetype) initWithTileStackFactory:(TileStackFactory *)tileStackFactory;
 -(instancetype) init NS_UNAVAILABLE;
+-(int) placeTile:(enum TileEnum)tileType atStackPos:(int)stackPos;
+-(void) resetBoard;
     
 @property (nonatomic, strong) NSArray<id<TileStackProtocol>> *tileStacks;
 

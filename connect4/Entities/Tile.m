@@ -13,7 +13,6 @@
 @synthesize value;
 
 -(instancetype) initWithValue:(enum TileEnum)value {
-    //TODO TEST
     if (self = [super init]) {
         self.value = value;
     }

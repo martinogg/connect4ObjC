@@ -10,9 +10,6 @@
 
 @interface ViewModel()
 
-@property (nonatomic, weak) id<GameStateProtocol> currentGameState;
-@property (nonatomic, strong) NSArray<id<GameStateProtocol>> *gameStates;
-
 @end
 
 
@@ -21,9 +18,10 @@
 @synthesize viewController;
 @synthesize router;
 @synthesize currentGameState;
+@synthesize gameStates;
 
 - (void)endCurrentGameState {
-    // TODO TEST
+
     id<GameStateProtocol> newGameState = currentGameState.nextGameState;
     [currentGameState willLeave];
     currentGameState = newGameState;

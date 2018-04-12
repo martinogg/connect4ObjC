@@ -12,7 +12,6 @@
 @implementation TileStackFactory
 
 -(id<TileStackProtocol>) createTileStack {
-    // TODO TEST
     return [[TileStack alloc] init];
 }
 

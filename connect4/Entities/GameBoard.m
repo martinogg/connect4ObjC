@@ -16,12 +16,15 @@
 @synthesize tileStacks;
 
 -(instancetype) initWithTileStackFactory:(id<TileStackFactoryProtocol>)tileStackFactory {
-    //TODO TEST
+    
     if (self = [super init]) {
         
         NSMutableArray<id<TileStackProtocol>> *newTileStacks = [[NSMutableArray<id<TileStackProtocol>> alloc] init];
         for (int i = 0; i < MAXSTACKS; i++) {
-            [newTileStacks addObject:[tileStackFactory createTileStack]];
+            
+            id<TileStackProtocol> newStack = [tileStackFactory createTileStack];
+            [newStack resetTiles];
+            [newTileStacks addObject:newStack];
         }
         
         self.tileStacks = [[NSArray<id<TileStackProtocol>> alloc] initWithArray:newTileStacks];
@@ -30,14 +33,21 @@
 }
 
 // Return int: position number of successful placement. -1 if fail
--(BOOL) placeTile:(enum TileEnum)tileType atStackPos:(int)stackPos {
-    // TODO TEST
+-(int) placeTile:(enum TileEnum)tileType atStackPos:(int)stackPos {
     
     id<TileStackProtocol> tileStack = [self.tileStacks objectAtIndex:stackPos];
     if (tileStack) {
+        
         return [tileStack placeTileForPlayer:tileType];
     }
     return -1; // FAIL
 }
+
+- (void)resetBoard {
+    for (id<TileStackProtocol> tileStack in self.tileStacks) {
+        [tileStack resetTiles];
+    }
+}
+
 
 @end

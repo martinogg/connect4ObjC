@@ -15,23 +15,30 @@
 @synthesize tiles;
 
 -(void) resetTiles {
-    // TODO TEST
+    
     NSMutableArray<Tile *> *newTiles = [[NSMutableArray<Tile *> alloc] init];
+    
     for (int i = 0; i < MAXSTACKHEIGHT; i++) {
+        
         [newTiles addObject:[[Tile alloc] initWithValue:eTILE_EMPTY]];
     }
-    tiles = [[NSArray<Tile *> alloc] initWithArray:newTiles];
+    
+    tiles = [NSArray<Tile *> arrayWithArray:newTiles];
 }
 
 // return: (int) the position of the tile placed. Or -1 for fail
 -(int) placeTileForPlayer:(enum TileEnum)playerTile {
-    // TODO TEST
+    
     for (int i = 0; i < MAXSTACKHEIGHT; i++) {
+        
         if ([tiles objectAtIndex:i].value == eTILE_EMPTY) {
+            
             [tiles objectAtIndex:i].value = playerTile;
+            
             return i;
         }
     }
+    
     return -1;
 }
 @end
