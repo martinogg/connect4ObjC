@@ -50,4 +50,15 @@
     XCTAssert(mockState2.willLeaveCalled == false);
 }
 
+-(void)testViewDidLoad {
+    ViewModel *viewModelToTest = [[ViewModel alloc] init];
+    MockGameState *mockGameState = [[MockGameState alloc] init];
+    viewModelToTest.gameStates = @[mockGameState];
+    
+    [viewModelToTest viewDidLoad];
+    
+    XCTAssert(viewModelToTest.currentGameState == mockGameState);
+    XCTAssert(mockGameState.onEnterCalled == true);
+}
+
 @end

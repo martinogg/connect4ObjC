@@ -19,6 +19,7 @@
 @synthesize router;
 @synthesize currentGameState;
 @synthesize gameStates;
+@synthesize gameBoard;
 
 - (void)endCurrentGameState {
 
@@ -26,6 +27,22 @@
     [currentGameState willLeave];
     currentGameState = newGameState;
     [currentGameState onEnter];
+}
+
+- (void)viewDidLoad {
+    
+    self.currentGameState = [self.gameStates objectAtIndex:0];
+    [self.currentGameState onEnter];
+}
+
+-(void) tilePlacedAtStackPosition:(int)position atHeightPosition:(int)resultHeightPosition {
+    // TODO
+    
+}
+
+-(void) showEndMessage:(NSString *)winningPlayerText {
+    // TODO
+    
 }
 
 @end

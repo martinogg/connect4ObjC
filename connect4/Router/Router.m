@@ -11,6 +11,8 @@
 #import "NewGameState.h"
 #import "PlayGameState.h"
 #import "EndGameState.h"
+#import "GameBoard.h"
+#import "TileStackFactory.h"
 
 @implementation Router
 
@@ -23,14 +25,25 @@
     newViewModel.router = newRouter;
     
     viewController.viewModel = newViewModel;
+    
+    newViewModel.gameStates = [newRouter createGameStatesWithViewModel:newViewModel];
+    
+    //TODO TEST
+    newViewModel.gameBoard = [[GameBoard alloc] initWithTileStackFactory:[[TileStackFactory alloc] init]];
 }
 
--(NSArray<id<GameStateProtocol>> *) createGameStates {
+-(NSArray<id<GameStateProtocol>> *) createGameStatesWithViewModel:(id<GameStateToViewModelProtocol>) viewModel {
     NewGameState* newGameState = [[NewGameState alloc] init];
     PlayGameState* playGameState = [[PlayGameState alloc] init];
     EndGameState* endGameState = [[EndGameState alloc] init];
     
-    //TODO set next game states for each and TEST
+    newGameState.nextGameState = playGameState;
+    playGameState.nextGameState = endGameState;
+    endGameState.nextGameState = newGameState;
+    
+    newGameState.viewModel = viewModel;
+    playGameState.viewModel = viewModel;
+    endGameState.viewModel = viewModel;
     
     return [NSArray<id<GameStateProtocol>> arrayWithObjects:newGameState, playGameState, endGameState, nil];
 }

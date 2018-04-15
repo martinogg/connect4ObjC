@@ -43,11 +43,20 @@
     return -1; // FAIL
 }
 
-- (void)resetBoard {
+- (void) resetBoard {
     for (id<TileStackProtocol> tileStack in self.tileStacks) {
         [tileStack resetTiles];
     }
 }
 
+-(BOOL) checkForWinningPlacementStartingAtStackPosition:(int)position atHeightPosition:(int)resultHeightPosition {
+    // TODO
+    return NO;
+}
+
+-(BOOL) anotherTileCanBePlaced {
+    // TODO
+    return NO;
+}
 
 @end

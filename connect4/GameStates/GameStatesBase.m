@@ -13,15 +13,18 @@
 @synthesize nextGameState;
 @synthesize viewModel;
 
-- (void)onEnter {
+- (void) onEnter {
     // To be overridden by subclass
     
 }
 
-- (void)willLeave {
+- (void) willLeave {
     // To be overridden by subclass
     
 }
 
+-(void) tilePlacedAtPosition:(int)position {
+    // to be overridden by sublass
+}
 
 @end

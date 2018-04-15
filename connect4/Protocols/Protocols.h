@@ -13,6 +13,7 @@
 // Forward declarations
 @protocol ViewControllerProtocol;
 @protocol GameStateProtocol;
+@protocol GameStateToViewModelProtocol;
 @class Tile;
 @class TileStackFactory;
 
@@ -20,7 +21,7 @@
 
 @protocol RouterProtocol
 
--(NSArray<id<GameStateProtocol>> *) createGameStates;
+-(NSArray<id<GameStateProtocol>> *) createGameStatesWithViewModel:(id<GameStateToViewModelProtocol>) viewModel;
 
 @end
 
@@ -32,12 +33,14 @@
 @property (nonatomic, strong) NSArray<id<GameStateProtocol>> *gameStates;
 @property (nonatomic, weak) id<GameStateProtocol> currentGameState;
 
+-(void) viewDidLoad;
+
 @end
 
 
 @protocol ViewControllerProtocol
 
-@property (nonatomic, strong) id<ViewModelProtocol> viewModel;
+@property (nonatomic, strong) id<ViewModelProtocol, GameStateToViewModelProtocol> viewModel;
 
 @end
 
@@ -58,6 +61,8 @@
 -(instancetype) init NS_UNAVAILABLE;
 -(int) placeTile:(enum TileEnum)tileType atStackPos:(int)stackPos;
 -(void) resetBoard;
+-(BOOL) checkForWinningPlacementStartingAtStackPosition:(int)position atHeightPosition:(int)resultHeightPosition;
+-(BOOL) anotherTileCanBePlaced;
     
 @property (nonatomic, strong) NSArray<id<TileStackProtocol>> *tileStacks;
 

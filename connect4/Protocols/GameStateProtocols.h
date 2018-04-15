@@ -11,11 +11,16 @@
 
 //forward declarations
 @protocol GameStateProtocol;
+@protocol GameBoardProtocol;
 
 //protocols
-@protocol GameStateToViewModelProtocol
+@protocol GameStateToViewModelProtocol   // GameState -> ViewModel
 
 -(void) endCurrentGameState;
+-(void) tilePlacedAtStackPosition:(int)position atHeightPosition:(int)resultHeightPosition;
+-(void) showEndMessage:(NSString *)winningPlayerText;
+
+@property (nonatomic) id<GameBoardProtocol> gameBoard;
 
 @end
 
@@ -24,11 +29,17 @@
 
 -(void) onEnter;
 -(void) willLeave;
+-(void) tilePlacedAtPosition:(int)position;
 
 @property (nonatomic, weak) id<GameStateProtocol> nextGameState;
 @property (nonatomic, weak) id<GameStateToViewModelProtocol> viewModel;
 
-
 @end
 
+
+@protocol PlayGameStateProtocol
+
+@property (nonatomic) enum TileEnum currentPlayer;
+
+@end
 

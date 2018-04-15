@@ -7,7 +7,8 @@
 //
 
 #import "GameStatesBase.h"
+#import "GameStateProtocols.h"
 
-@interface PlayGameState : GameStatesBase
+@interface PlayGameState : GameStatesBase <PlayGameStateProtocol>
 
 @end

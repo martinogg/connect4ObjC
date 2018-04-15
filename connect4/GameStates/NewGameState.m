@@ -10,4 +10,11 @@
 
 @implementation NewGameState
 
+-(void) onEnter {
+    //TODO TEST
+    [self.viewModel.gameBoard resetBoard];
+    [self.viewModel endCurrentGameState];
+    
+}
+
 @end
