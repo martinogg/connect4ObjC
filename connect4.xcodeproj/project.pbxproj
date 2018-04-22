@@ -17,6 +17,7 @@
 		EE3A6C6B20800B9D00D5B385 /* GameBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3A6C6A20800B9D00D5B385 /* GameBoardTests.m */; };
 		EE3A6C6D2082184F00D5B385 /* ViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3A6C6C2082184F00D5B385 /* ViewControllerTests.m */; };
 		EE3A6C70208218C900D5B385 /* MockViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3A6C6F208218C900D5B385 /* MockViewModel.m */; };
+		EE3A6C73208D1FF100D5B385 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3A6C72208D1FF100D5B385 /* GameView.m */; };
 		EE766790206D61AB00BF32B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE813EAE206D5AC4003A793A /* ViewController.m */; };
 		EE766792206D65CC00BF32B6 /* RouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE766791206D65CC00BF32B6 /* RouterTests.m */; };
 		EE766798206D6A0300BF32B6 /* GameStatesBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EE766797206D6A0300BF32B6 /* GameStatesBase.m */; };
@@ -79,6 +80,8 @@
 		EE3A6C6C2082184F00D5B385 /* ViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTests.m; sourceTree = "<group>"; };
 		EE3A6C6E208218C900D5B385 /* MockViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockViewModel.h; sourceTree = "<group>"; };
 		EE3A6C6F208218C900D5B385 /* MockViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockViewModel.m; sourceTree = "<group>"; };
+		EE3A6C71208D1FF100D5B385 /* GameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		EE3A6C72208D1FF100D5B385 /* GameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
 		EE766791206D65CC00BF32B6 /* RouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterTests.m; sourceTree = "<group>"; };
 		EE766795206D68CA00BF32B6 /* GameStateProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameStateProtocols.h; sourceTree = "<group>"; };
 		EE766796206D6A0300BF32B6 /* GameStatesBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameStatesBase.h; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 			children = (
 				EE813EAD206D5AC4003A793A /* ViewController.h */,
 				EE813EAE206D5AC4003A793A /* ViewController.m */,
+				EE3A6C71208D1FF100D5B385 /* GameView.h */,
+				EE3A6C72208D1FF100D5B385 /* GameView.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 				EE7667A0206D8EE800BF32B6 /* PlayGameState.m in Sources */,
 				EE7667A8206E64DB00BF32B6 /* GameBoard.m in Sources */,
 				EE7667A4206E459B00BF32B6 /* EndGameState.m in Sources */,
+				EE3A6C73208D1FF100D5B385 /* GameView.m in Sources */,
 				EE813EE5206D5F1B003A793A /* ViewModel.m in Sources */,
 				EE7667AC206E64F100BF32B6 /* TileStack.m in Sources */,
 				EE813EBD206D5AC4003A793A /* main.m in Sources */,

@@ -35,8 +35,12 @@
     [self.currentGameState onEnter];
 }
 
+
+#pragma mark - GameStateToViewModelProtocol
+
 -(void) tilePlacedAtStackPosition:(int)position atHeightPosition:(int)resultHeightPosition {
     // TODO
+    
     
 }
 
